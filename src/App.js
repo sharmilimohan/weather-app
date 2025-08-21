@@ -5,7 +5,7 @@ import "./App.css";
 
 const App = () => {
   return (
-    <Router basename="/your-repo-name"> 
+    <Router basename={process.env.PUBLIC_URL}> 
       <Routes>
         <Route path="/" element={<WeatherApp />} />
       </Routes>
