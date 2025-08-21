@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.weather-app {
   min-height: 100vh;
+  background: linear-gradient(to bottom, #87ceeb, #f0f9ff);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1e293b;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.search-bar form {
+  display: flex;
+  border-radius: 30px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.search-bar input {
+  border: none;
+  padding: 10px 14px;
+  font-size: 16px;
+  outline: none;
+}
+.search-bar button {
+  background: #0284c7;
+  border: none;
   color: white;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+.loc-btn {
+  border: none;
+  background: white;
+  padding: 10px 14px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+/* Loading/Error */
+.loading {
+  font-size: 16px;
+  color: #475569;
+}
+.error {
+  color: #dc2626;
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Main weather section */
+.weather-main {
+  text-align: center;
+}
+.weather-icon {
+  width: 140px;
+  height: 140px;
+}
+.temp {
+  font-size: 72px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+.city {
+  font-size: 20px;
+  font-weight: 500;
+}
+.desc {
+  text-transform: capitalize;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #334155;
+}
+
+/* Extra info */
+.extra-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.extra-info div {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 12px 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.extra-info span {
+  font-size: 12px;
+  color: #475569;
+}
+.extra-info p {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 4px 0 0;
 }
